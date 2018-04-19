@@ -2,6 +2,6 @@
 
 ## Running Your Local Server
 
-    ```bash
-    $ python manage.py run-server
-    ```
+```bash
+$ python manage.py run-server
+```
