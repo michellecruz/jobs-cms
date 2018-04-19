@@ -1,0 +1,67 @@
+<!-- howdy/templates/index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JOB BOARD</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Add additional CSS in static file -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        
+        <header>
+            <div class="container">
+                <h1>Job Board</h1>
+                <div class="button-container">
+                    <a href="#browse" class="button button-browse">Browse Jobs</a>
+                    <a href="/create" class="button button-add">Add Job</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="browse">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="sort">Sort By: <strong>Date Posted</strong></div>
+                </div>
+
+                <ul>
+
+                {% for job in jobs %}
+
+                    <li id="">
+                        <h1>{{ job.title }} <span>—</span> {{ job.company.company_name }}</h1>
+                        <h2>{{ job.company.city }}, {{ job.company.state }}</h2>
+                        <p>{{ job.short_description }}</p>
+                    </li>
+
+                    <!-- <li id="">
+                        <h1>Design Director <span>—</span> This Also</h1>
+                        <h2>Brooklyn, NY</h2>
+                        <p>Design directors at our studio help lead a single product or work stream. They support the creative directors by managing deliverables, working with clients, and mentoring junior designers.</p>
+                    </li> -->
+
+                {% endfor %}
+
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="links">
+                    <a href="" target="_blank">Skillshare Course</a>
+                </div>
+            </div>
+        </footer>
+
+        {% load static %}
+        <script src="{% static 'js/libraries/jquery-2.1.4.min.js' %}"></script>
+        <script src="{% static 'js/app.js' %}"></script>
+    </body>
+</html>

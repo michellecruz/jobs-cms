@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html style="background-color: #fff;">
+    <head>
+        <meta charset="utf-8">
+        <title>JOB BOARD</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Add additional CSS in static file -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body style="padding: 30px;background-color: #fff;">
+
+        <div id="form_container">
+
+            <form name="form" id="job_listing_form" method="post" action="/post">{% csrf_token %}
+
+                <div>
+                    <label class="form-label" for="company_name">Company Name</label>
+                    <input name="company_name" id="company_name" type="text" value="" autocomplete="company_name" spellcheck="true" autofocus required/>
+                </div>
+
+                <div>
+                    <label class="form-label" for="location_city">City</label>
+                    <input name="location_city" id="location_city" type="text" value="" autocomplete="location_city" spellcheck="true" autocapitalize="words" autofocus required/>
+                </div>
+
+                <div>
+                    <label class="form-label" for="location_state">State</label>
+                    <input name="location_state" id="location_state" type="text" value="" autocomplete="location_state" spellcheck="true" autocapitalize="words" autofocus required/>
+                </div>
+
+                <div>
+                    <label class="form-label" for="job_title">Job Title</label>
+                    <input name="job_title" id="job_title" type="text" value="" autocomplete="job_title" spellcheck="true" autocapitalize="words" autofocus required/>
+                </div>
+
+                <div>
+                    <label class="form-label" for="job_description">Long Description</label>
+                    <textarea data-autoresize name="job_description" id="job_description" autocapitalize="sentences" rows="5" required></textarea>
+                </div>
+
+                <div>
+                    <label class="form-label" for="short_job_description">Short Description</label>
+                    <textarea data-autoresize name="short_job_description" id="short_job_description" autocapitalize="sentences" rows="4" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" class="save_button">Publish</button>
+                </div>
+
+            </form>
+
+        </div>
+    </body>
+</html>
