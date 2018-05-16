@@ -1,0 +1,127 @@
+<!-- jobs/templates/index.html -->
+
+<!-- load static files -->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JOBSJOBSJOBS</title>
+
+        <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    </head>
+    <body>
+        
+        <header>
+            <div id="head">
+                <div class="container">
+                    <a href="/"><h1>JobsJobsJobs</h1></a>
+                </div>
+            </div>
+
+            <ul id="filters">
+                <li class="filter-category dropdown closed">
+                    <div class="title">
+                        Design
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>All Industries</li>
+                            <li>Advertising</li>
+                            <li>Design</li>
+                            <li>Fashion</li>
+                            <li>Film</li>
+                            <li>Marketing</li>
+                            <li>Public Relations</li>
+                            <li>Other</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="filter-job-title dropdown closed">
+                    <div class="title">
+                        Product Designer
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>All Job Roles</li>
+                            <li>Advertising</li>
+                            <li>Fashion</li>
+                            <li>Film</li>
+                            <li>Marketing</li>
+                            <li>Public Relations</li>
+                            <li>Other</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="filter-location dropdown closed">
+                    <div class="title">
+                        New York, NY
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li>All Locations</li>
+                            <li>Advertising</li>
+                            <li>Fashion</li>
+                            <li>Film</li>
+                            <li>Marketing</li>
+                            <li>Public Relations</li>
+                            <li>Other</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </header>
+
+        <main id="job-details">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-description">
+                        Job Details
+                    </div>
+                </div>
+
+                <ul>
+                    <li>
+                        <div class="job-logo">
+                            <img src="{% static 'images/logo.png'%}">
+                        </div>
+                        <div class="job-title">
+                            <h1>Product Designer</h1>
+                            <h2>This Also — Brooklyn, NY</h2>
+                        </div>
+                        <div class="job-link">
+                            <a href="#" class="job-button">View on companies site</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="job-description">
+                    <p>
+                        We’re hiring a Product Designer.
+                    </p>
+                    <p>
+                        Designers at our studio are creative generalists that help develop ideas and interfaces for new products. They are able to work independently on major portions of a product, and will be working closely with clients and internal leadership.
+                    </p>
+                    <p>
+                        Good candidates will have a strong background in graphic design, a strong understanding of interaction design, and should also have an interest in prototyping, motion design, photography, writing, or illustration.
+                    </p>
+                </div>
+
+                <h2 class="job-details">Posted: May 4, 2018</h2>
+                <h2 class="job-details">Job Level: Senior Staff</h2>
+
+            </div>
+        </main>
+
+        <script src="{% static 'js/libraries/jquery-2.1.4.min.js' %}"></script>
+        <script src="{% static 'js/app.js' %}"></script>
+    </body>
+</html>

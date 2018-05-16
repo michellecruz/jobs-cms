@@ -1,0 +1,338 @@
+/*
+    =================================
+    Base Styles
+    =================================
+*/
+
+    /* General */
+    html, body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        scroll-behavior: smooth;
+    }
+
+    html {
+        background-color: #0000FF;
+    }
+
+    body {
+        background-color: #fff;
+        font-weight: 300;
+        font-size: 24px;
+        letter-spacing: 1px;
+        height: 100%;
+    }
+
+
+    /* Text & Links */
+    h1 {
+        font-size: 36px;
+        line-height: 49px;
+    }
+
+    h2 {
+        font-size: 22px;
+        line-height: 30px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a.job-button {
+        border: 1px solid #D8D8D8;
+        letter-spacing: 2px;
+        font-size: 16px;
+        line-height: 16px;
+        color: #0000FF;
+        font-weight: 400;
+        padding: 20px 50px;
+    }
+    a.job-button:hover {
+        border-color: #0000FF;
+        color: #fff;
+        background-color: #0000FF;
+    }
+
+
+
+/*
+    =================================
+    Header Styles
+    =================================
+*/
+
+    /* General */
+
+    header {
+        width: 100vw;
+        height: 170px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    header #head {
+        background-color: #0000FF;
+        height: 80px;
+        color: #fff;
+        text-align: center;
+    }
+    header #head h1 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 700;
+        line-height: 80px;
+        text-transform: uppercase;
+
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */
+    }
+    header #head a {
+        color: #fff;
+    }
+
+
+    /* Filters */
+
+    header #filters {
+        height: 90px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Default */
+        flex-wrap: nowrap; /* Default */
+
+        border-top: 1px solid #0000FF;
+    }
+
+    header #filters > li {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        /*height: 90px;*/
+        width: 100%;
+        padding: 0 4%;
+        margin: auto;
+        background: #fff;
+        border-right: 1px solid #0000FF;
+        border-left: 1px solid #0000FF;
+        border-bottom: 1px solid #0000FF;
+    }
+    header #filters li:first-child {
+        border-left: 0;
+    }
+    header #filters li:last-child {
+        border-right: 0;
+        margin-left: -1px;
+    }
+    header #filters li.filter-job-title {
+        margin-left: -1px;
+    }
+
+
+    /* Dropdown */
+    .dropdown.closed .dropdown-menu {
+        margin-top: 0px;
+        height: 0px!important;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    .dropdown.closed .dropdown-menu li {
+        height: 0px;
+    }
+    .dropdown.closed .title:after {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    .dropdown .title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */
+
+        width: 100%;
+        position: relative;
+        height: 90px;
+        cursor: pointer;
+    }
+    .dropdown .title:after {
+        display: block;
+        content: ' ';
+        width: 12px;
+        height: 8px;
+        background-size: 12px 8px;
+        background-image: url('../images/arrow.png');
+        position: absolute;
+        top: calc(50% - 4px);
+        right: 0;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .dropdown .dropdown-menu {
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-box-sizing: "border-box";
+        -moz-box-sizing: "border-box";
+        box-sizing: "border-box";
+    }
+    .dropdown ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .dropdown ul li {
+        width: 100%;
+        line-height: 48px;
+        border-bottom: 0!important;
+        padding: 0;
+        vertical-align: top;
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-transition: margin-top 0.5s, height 0.5s;
+        -moz-transition: margin-top 0.5s, height 0.5s;
+        transition: margin-top 0.5s, height 0.5s;
+    }
+    .dropdown ul li:hover {
+        background-color: rgba(0,0,0,0.02);
+        color: #0000FF;
+    }
+
+
+
+
+/*
+    =================================
+    Main/Browse Styles
+    =================================
+*/
+
+    /* General */
+    main {
+        margin: 170px auto 160px;
+        width: 100%;
+    }
+
+    main .container {
+        margin: auto;
+        max-width: 1000px;
+        padding: 0 40px;
+    }
+
+
+    /* Filter Description */
+    main .filter-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row; /* Default */
+        flex-wrap: nowrap; /* Default */
+
+        padding: 90px 0 40px;
+    }
+
+    main .filter-container .filter-description {        
+        padding: 0 50px 0 0;
+    }
+
+    main .filter-container .filter-description span {
+        color: #0000FF;
+    }
+
+    main .filter-container .sort {
+        font-size: 18px;
+    }
+
+
+    /* Job Listings */
+    main ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row; /* Default */
+        flex-wrap: nowrap; /* Default */
+
+        border-bottom: 1px solid #D8D8D8;
+        padding: 60px 0px 60px 20px;
+    }
+
+    /* LOGO */
+    main ul li .job-logo {
+        min-width: 80px;
+        padding: 0 50px 0 0;
+    }
+    main ul li .job-logo img {
+        max-width: 80px;
+    }
+
+    /* TITLE */
+    main ul li .job-title {
+        width: 90%;
+        padding: 0 50px 0 0;
+    }
+    main ul li .job-title h2 {
+        padding: 20px 0 0;
+    }
+
+    /* LINK */
+    main ul li .job-link {
+        width: 600px;
+        text-align: right;
+    }
+
+
+
+
+/*
+    =================================
+    Main/Job Details Styles
+    =================================
+*/
+
+    main#job-details ul li {
+        border: 0;
+    }
+
+    main#job-details p {
+        font-size: 28px;
+        line-height: 56px;
+        padding-bottom: 50px;
+    }
+    main#job-details p:last-child {
+        padding-bottom: 0;
+    }
+
+    main#job-details .job-description {
+        padding: 40px 0 60px;
+    }
+
+    main#job-details h2.job-details {
+        font-size: 24px;
+        line-height: 56px;
+    }
+
+
+
+
+
+
