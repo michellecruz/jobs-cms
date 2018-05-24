@@ -1,0 +1,23 @@
+<!-- load static files -->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JOBSJOBSJOBS</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+        {% if 'admin' in request.path %}
+        <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+        {% endif %}
+    </head>
+
+    <body {% if 'admin' in request.path %}class="admin"{% endif %}>

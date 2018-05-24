@@ -20,14 +20,16 @@
         font-weight: 300;
         font-size: 24px;
         letter-spacing: 1px;
-        height: 100%;
+        border-bottom: 20px solid #0000FF;
+        min-height: calc(100vh - 20px);
     }
 
 
     /* Text & Links */
     h1 {
         font-size: 36px;
-        line-height: 49px;
+        line-height: 50px;
+        letter-spacing: 2px;
     }
 
     h2 {
@@ -38,6 +40,7 @@
 
     a {
         text-decoration: none;
+        color: #0000FF;
     }
 
     a.job-button {
@@ -49,6 +52,7 @@
         font-weight: 400;
         padding: 20px 50px;
     }
+
     a.job-button:hover {
         border-color: #0000FF;
         color: #fff;
@@ -68,11 +72,14 @@
     header {
         width: 100vw;
         height: 170px;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        font-size: 24px;
-        letter-spacing: 2px;
+        z-index: 9;
+    }
+
+    header.smaller {
+        height: 80px;
     }
 
     header #head {
@@ -81,8 +88,14 @@
         color: #fff;
         text-align: center;
     }
+
+    header #head .container {
+        padding: 0 40px;
+    }
+
     header #head h1 {
         font-family: 'Roboto Condensed', sans-serif;
+        font-size: 24px;
         font-weight: 700;
         line-height: 80px;
         text-transform: uppercase;
@@ -92,6 +105,7 @@
         -ms-user-select: none;      /* IE 10+ */
         user-select: none;          /* Likely future */
     }
+
     header #head a {
         color: #fff;
     }
@@ -101,14 +115,11 @@
 
     header #filters {
         height: 90px;
-
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row; /* Default */
         flex-wrap: nowrap; /* Default */
-
-        border-top: 1px solid #0000FF;
     }
 
     header #filters > li {
@@ -116,7 +127,6 @@
         justify-content: center;
         flex-direction: column;
 
-        /*height: 90px;*/
         width: 100%;
         padding: 0 4%;
         margin: auto;
@@ -125,13 +135,16 @@
         border-left: 1px solid #0000FF;
         border-bottom: 1px solid #0000FF;
     }
+
     header #filters li:first-child {
         border-left: 0;
     }
+
     header #filters li:last-child {
         border-right: 0;
         margin-left: -1px;
     }
+
     header #filters li.filter-job-title {
         margin-left: -1px;
     }
@@ -145,9 +158,11 @@
         -moz-transition: all 0.2s;
         transition: all 0.2s;
     }
+
     .dropdown.closed .dropdown-menu li {
         height: 0px;
     }
+
     .dropdown.closed .title:after {
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -155,6 +170,7 @@
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     .dropdown .title {
         display: flex;
         justify-content: center;
@@ -170,6 +186,7 @@
         height: 90px;
         cursor: pointer;
     }
+
     .dropdown .title:after {
         display: block;
         content: ' ';
@@ -186,6 +203,7 @@
         -o-transform: rotate(180deg);
         transform: rotate(180deg);
     }
+
     .dropdown .dropdown-menu {
         position: relative;
         overflow: hidden;
@@ -196,11 +214,13 @@
         -moz-box-sizing: "border-box";
         box-sizing: "border-box";
     }
+
     .dropdown ul {
         position: absolute;
         top: 0;
         width: 100%;
     }
+
     .dropdown ul li {
         width: 100%;
         line-height: 48px;
@@ -213,11 +233,11 @@
         -moz-transition: margin-top 0.5s, height 0.5s;
         transition: margin-top 0.5s, height 0.5s;
     }
+
     .dropdown ul li:hover {
         background-color: rgba(0,0,0,0.02);
         color: #0000FF;
     }
-
 
 
 
@@ -229,14 +249,14 @@
 
     /* General */
     main {
-        margin: 170px auto 160px;
+        padding: 170px 0 0;
         width: 100%;
     }
 
     main .container {
         margin: auto;
         max-width: 1000px;
-        padding: 0 40px;
+        padding: 90px 40px;
     }
 
 
@@ -248,14 +268,14 @@
         flex-direction: row; /* Default */
         flex-wrap: nowrap; /* Default */
 
-        padding: 90px 0 40px;
+        padding: 0 0 40px;
     }
 
-    main .filter-container .filter-description {        
+    main .filter-container .description {        
         padding: 0 50px 0 0;
     }
 
-    main .filter-container .filter-description span {
+    main .filter-container .description span {
         color: #0000FF;
     }
 
@@ -302,7 +322,6 @@
 
 
 
-
 /*
     =================================
     Main/Job Details Styles
@@ -330,9 +349,3 @@
         font-size: 24px;
         line-height: 56px;
     }
-
-
-
-
-
-

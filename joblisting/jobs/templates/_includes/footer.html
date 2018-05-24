@@ -1,0 +1,11 @@
+<!-- load static files -->
+{% load static %}
+
+        <script src="{% static 'js/libraries/jquery-2.1.4.min.js' %}"></script>
+        <script src="{% static 'js/app.js' %}"></script>
+        {% if 'admin' in request.path %}
+        <script src="{% static 'js/admin.js' %}"></script>
+        {% endif %}
+    </body>
+
+</html>

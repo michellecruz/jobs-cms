@@ -26,28 +26,28 @@ SECRET_KEY = '9mh(otl4(n2e1744&k2^iba_ti079ei$i2_vskd2wasu&r#^u+'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*'
+    '*' # TEMP - Let's you view page from any device that's on the same network.
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
+    'jobs.apps.JobsConfig',
+    'django.contrib.admin',         # Commenting this out so that we don't use the built-in Django admin interface.
+    'django.contrib.auth',          # Core authentication framework and its default models.
+    'django.contrib.contenttypes',  # Django content type system (allows permissions to be associated with models).
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'jobs.apps.JobsConfig'
 ]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',     # Manages sessions across requests
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Associates users with requests using sessions.
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -122,3 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Redirects user to custom page after login.
+LOGIN_REDIRECT_URL = '/admin'
+
+# FOR DJANGO 1.10+
+LOGOUT_REDIRECT_URL = '/admin'
