@@ -91,33 +91,33 @@ Add additional notes about how to deploy this on a live system...
 
 # <a name="project-structure"></a>Project Structure
 ```
-.
-├── manage.py
-├── README.md
-├── db.sqlite3
-├── 📁 joblisting
-│		 ├── __init__.py
-│		 ├── settings.py
-│		 ├── urls.py
-│		 └── wsgi.py
-└── 📁 jobs
- 		 ├── __init__.py
-		 ├── admin.py
-		 ├── apps.py
-		 ├── models.py
-		 ├── urls.py
-		 ├── views.py
-		 ├── 📁 migrations
-		 ├── 📁 static
-		 │	 	  ├── 📁 css
-		 │		  ├── 📁 images
-		 │		  └── 📁 js
-		 └── 📁 templates
-		 		  ├── details.html
-		 		  ├── index.html
-		 		  ├── 📁 _includes
-		 		  ├── 📁 admin
-		 		  └── 📁 registration
-		        	  	   ├── logged_out.html
-	        	  		   └── login.html
+README.md
+📁 joblisting
+	├── manage.py
+	├── db.sqlite3
+	├── 📁 joblisting
+	│		 ├── __init__.py
+	│		 ├── settings.py
+	│		 ├── urls.py
+	│		 └── wsgi.py
+	└── 📁 jobs
+	 		 ├── __init__.py
+			 ├── admin.py
+			 ├── apps.py
+			 ├── models.py
+			 ├── urls.py
+			 ├── views.py
+			 ├── 📁 migrations
+			 ├── 📁 static
+			 │	 	  ├── 📁 css
+			 │		  ├── 📁 images
+			 │		  └── 📁 js
+			 └── 📁 templates
+			 		  ├── details.html
+			 		  ├── index.html
+			 		  ├── 📁 _includes
+			 		  ├── 📁 admin
+			 		  └── 📁 registration
+			        	  	   ├── logged_out.html
+		        	  		   └── login.html
 ```
