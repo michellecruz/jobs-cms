@@ -22,7 +22,7 @@ To get this project to run on your local machine, you will need to have the foll
 * Python **2.7**
 * Django **1.11**
 
-###**[Python]()**
+### **[Python]()**
 Mac OS X comes with Python 2.7 out of the box, but it's best to double check anyway. Type the following on the command line to find out what version of Python your system has installed (if any):
 
 ```bash
@@ -33,7 +33,7 @@ If Python is installed, it will print its current version. If you don't get a re
 *Note: This build has not been tested on Python 3.x.*
 
 
-###**[Django]()**
+### **[Django]()**
 Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Type the following on the command line to see if you have Django installed:
 
 ```bash
