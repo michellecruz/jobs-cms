@@ -11,12 +11,12 @@ This project was built to support this **[online class]()**, which walks you thr
 
 ## Table of Contents
 1. [Introduction](#intro)
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Testing CMS Locally](#testing-locally)
-* [Deployment](#deployment)
-* [Project Structure](#project-structure)
-* [Frequently Asked Questions](#faqs)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Testing CMS Locally](#testing-locally)
+5. [Deployment](#deployment)
+6. [Project Structure](#project-structure)
+7. [Frequently Asked Questions](#faqs)
 
 
 ## <a name="intro"></a>Introduction
