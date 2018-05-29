@@ -122,7 +122,7 @@ password: <font color="red">```password```</font>
 │      ├── settings.py
 │      ├── urls.py
 │      └── wsgi.py
-└── 📁 jobs (contains jobs app/website)
+└── 📁 jobs (contains jobs app)
        ├── __init__.py
        ├── admin.py
        ├── apps.py
