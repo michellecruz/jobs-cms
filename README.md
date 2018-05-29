@@ -31,7 +31,7 @@ Mac OS X comes with Python 2.7 out of the box, but it's best to double check any
 ```bash
 $ python -V
 ```
-If Python is installed, it will print its current version. If you don't get a response from the command, you should download and install Python [here](https://www.python.org/downloads/).
+If Python is installed, it will print its current version. If you don't get a response from the command, you should download and install Python 2.7 [here](https://www.python.org/downloads/).
 
 _Note: This build has not been tested on Python 3.x._
 
@@ -42,11 +42,9 @@ Django is a high-level Python Web framework that encourages rapid development an
 ```bash
 $ python -m django --version
 ```
-If Django is installed, you should see the version of your installation. If it isn’t, you’ll get an error saying `No module named django`.
+If Django is installed, you should see the version of your installation. If it isn’t, you’ll get an error saying `No module named django`. In that case, download and install Django 1.11 [here](https://www.djangoproject.com/download/1.11.13/tarball).
 
-<font color="blue"><center>[WIP: Details about how to install Django if you don't already have it]</center></font>
-
-_Note: The versions of Python and Django that you are using are important. For more info about version support, go to [Django's FAQ page](https://docs.djangoproject.com/en/1.11/faq/install/#faq-python-version-support)._
+_Note: The versions of Python and Django that you are using are important. Django **1.11** is the last version to support Python **2.7**. For more info about version support, go to [Django's FAQ page](https://docs.djangoproject.com/en/1.11/faq/install/#faq-python-version-support)._
 
 ## <a name="installation"></a>Installation
 
@@ -56,7 +54,7 @@ Now that you have all the prerequisites installed, you're ready to clone this pr
 
 You can download the zip directly from Github or through the command line.
 
-If downloading through the command line, navigate to the directory where you would like to copy this repository. This can be anywhere in your local file system, like your home directory. For example:
+If you're downloading through the command line, navigate to the directory where you would like to copy this repository. This can be anywhere in your local file system, like your home directory. For example:
 
 ```bash
 $ cd ~/
@@ -109,7 +107,7 @@ password: <font color="red">```password```</font>
 ## Acknowledgments
 
 * Thanks to [Tyler Moody]() for help on creating the initial designs.
-* Thanks to ...
+* Thanks to [siegelgale.com](http://www.siegelgale.com/brand-naming-8-great-fake-company-names) for the list of fictional company names.
 
 # <a name="project-structure"></a>Project Structure
 ```
