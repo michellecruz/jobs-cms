@@ -1,0 +1,54 @@
+<!-- jobs/templates/details.html -->
+
+<!-- load static files -->
+{% load static %}
+
+{% include "_includes/header.html" %}
+
+        <header>
+            <div id="head">
+                <div class="container">
+                    <h1><a href="/">JobsJobsJobs</a></h1>
+                </div>
+            </div>
+            
+            {% include "_includes/menu-filter.html" %}
+        </header>
+
+        <main id="job-details">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="description">
+                        Job Details
+                    </div>
+                </div>
+
+                <ul>
+                    <li>
+                        <div class="job-logo">
+                            <img src="{% if job.company.logo_url %}{{ job.company.logo_url }}{% else %}{% static 'images/logo-placeholder.png'%}{% endif %}">
+                        </div>
+                        <div class="job-title">
+                            <h1>{{ job.title }}</h1>
+                            <h2>{{ job.company.name }} — {{ job.city }}, {{ job.state }}</h2>
+                        </div>
+                        {% if job.company.website %}
+                        <div class="job-link">
+                            <a href="{{ job.company.website }}" class="job-button">View on companies site</a>
+                        </div>
+                        {% endif %}
+                    </li>
+                </ul>
+
+                <div class="job-description">
+                    <p>
+                        {{ job.description }}
+                    </p>
+                </div>
+
+                <h2 class="job-details">Posted: {{ job.date_added|date:"F j, Y" }}</h2>
+
+            </div>
+        </main>
+
+{% include "_includes/footer.html" %}
