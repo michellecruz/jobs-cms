@@ -2,7 +2,7 @@
 
 **JOBSJOBSJOBS** is a job listings website that has a simple, custom Content Management System (CMS), built using Python and Django for the back-end, and HTML, CSS, and JavaScript for the front-end.
 
-<font color="blue"><center>[WIP: gif of CMS section]</center></font>
+![Demo Animation](../assets/cms.gif?raw=true)
 
 This project was built to support this **[online class]()**, which walks you through building this CMS from scratch.
 
