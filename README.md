@@ -1,24 +1,27 @@
 # JOBSJOBSJOBS: A Custom CMS
 
-**JOBSJOBSJOBS** is a job listings website that has a simple, custom Content Management System (CMS), built using Python and Django for the back-end, and HTML, CSS, and JavaScript for the front-end.
+**JOBSJOBSJOBS** is a job listing website that has a simple, custom Content Management System (CMS), built using Python and Django for the back-end, and HTML, CSS, and JavaScript for the front-end.
 
 <p align="center">
   <kbd><img src="../assets/cms.gif?raw=true" width="400"></kbd>
 </p>
 
-This project was built to support this **[online class]()**, which walks you through building this CMS from scratch.
+This project was built to support this **[online class]()**, which walks you through building a custom CMS from scratch.
 
-## Introduction
-
-The following instructions will allow you to copy the project and run it on your local machine for development and testing purposes. See **Deployment** section for notes on how to deploy the project on a live server.
 
 ## Table of Contents
+1. [Introduction](#intro)
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Testing CMS Locally](#testing-locally)
 * [Deployment](#deployment)
 * [Project Structure](#project-structure)
 * [Frequently Asked Questions](#faqs)
+
+
+## <a name="intro"></a>Introduction
+
+The next few sections will teach you how to copy this project and run it on your local machine for development and testing purposes. See the [Deployment](#deployment) section for notes on how to deploy the project on a live server.
 
 ## <a name="requirements"></a>Requirements
 
@@ -27,7 +30,7 @@ Before you can get this project to run on your local machine, you need to have t
 * Python **2.7**
 * Django **1.11**
 
-### **[Python]()**
+### **[Python](https://www.python.org)**
 Mac OS X comes with Python 2.7 out of the box, but it's best to double check anyway. Type the following on the command line to find out what version of Python your system has installed (if any):
 
 ```bash
@@ -38,7 +41,7 @@ If Python is installed, it will print its current version. If you don't get a re
 _Note: This build has not been tested on Python 3.x._
 
 
-### **[Django]()**
+### **[Django](https://docs.djangoproject.com/en/1.11/)**
 Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Type the following on the command line to see if you have Django installed:
 
 ```bash
@@ -89,18 +92,22 @@ _Note: Since this was created to teach the viewer how to create a CMS, the filte
 
 Now that your website it up and running locally, you can access your admin panel to make changes to the website. Go to [http://localhost:8000/admin](http://localhost:8000/admin) and use the following login credentials:
 
-username: <font color="red">```admin```</font>
-password: <font color="red">```password```</font>
+> username: ```admin```<br>
+> password: ```password```
 
-<font color="blue"><center>[WIP: add more testing explanations]</center></font>
+Once logged in, you'll have access to the Admin Dashboard, where you can add/edit/delete jobs and manage your authorized admins.
+
+_Note: Because this is a demo, there are no confirmation states for **Deleting** or **Publishing**. But when you create your own CMS, it's recommended that you add these details to prevent accidental deletion of data._
 
 ## <a name="deployment"></a>Deployment
 
-<font color="blue"><center>[WIP: add additional notes about how to deploy this on a live system]</center></font>
+* [Python Anywhere](https://help.pythonanywhere.com/pages/DeployExistingDjangoProject/)
+
+**[WIP: add additional notes about how to deploy this on a live system]**
 
 ## Built With
 
-* [Django]() - The web framework used.
+* [Django](https://www.djangoproject.com) - The web framework used.
 
 ## Authors
 
@@ -108,7 +115,7 @@ password: <font color="red">```password```</font>
 
 ## Acknowledgments
 
-* Thanks to [Tyler Moody]() for help on creating the initial designs.
+* Thanks to [Tyler Moody]() for help with creating the initial designs.
 * Thanks to [siegelgale.com](http://www.siegelgale.com/brand-naming-8-great-fake-company-names) for the list of fictional company names.
 
 # <a name="project-structure"></a>Project Structure
@@ -147,4 +154,10 @@ password: <font color="red">```password```</font>
 # <a name="faqs"></a>Frequently Asked Questions
 
 **What’s the difference between a project and an app on Django?**
-*An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.*
+>An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+
+**Where is the data from the CMS stored?**
+>In the [Project Structure](#project-structure), you'll notice the file **db.sqlite3**. This is where your data is stored. By default, Django's configuration uses SQLite, a lightweight database that is included in Python, so you won’t need to install anything else to support your database.
+
+**Can I use the SQLite database for production?**
+>In this case, yes. You can technically use SQLite for development and production, but for much heavier transaction loads there may be better options such as PostgreSQL or MySQL. Go [here](https://docs.djangoproject.com/en/1.11/ref/databases/) to learn more about using other databases.
