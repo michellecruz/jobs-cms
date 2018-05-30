@@ -10,6 +10,7 @@ This project was built to support this **[online class]()**, which walks you thr
 
 
 ## Table of Contents
+
 1. [Introduction](#intro)
 2. [Requirements](#requirements)
 3. [Installation](#installation)
@@ -23,7 +24,8 @@ This project was built to support this **[online class]()**, which walks you thr
 
 The next few sections will teach you how to copy this project and run it on your local machine for development and testing purposes. See the [Deployment](#deployment) section for notes on how to deploy the project on a live server.
 
-_Note: This README was written specifically for Mac OS X. You're free to use Windows with this project as well, but the shell commands may be slightly different._
+>_Note: This README was written specifically for Mac OS X. You're free to use Windows with this project as well, but the shell commands may be slightly different._
+
 
 ## <a name="requirements"></a>Requirements
 
@@ -32,23 +34,27 @@ Before you can get this project to run on your local machine, you need to have t
 * Python **2.7**
 * Django **1.11**
 
+
 ### **[Python](https://www.python.org)**
 Mac OS X comes with Python 2.7 out of the box, but it's best to double check anyway. Type the following on the command line to find out what version of Python your system has installed (if any):
 
 ```bash
 $ python -V
 ```
+
 If Python is installed, it will print its current version. If you don't get a response from the command, you should download and install Python 2.7 [here](https://www.python.org/downloads/).
 
-_Note: This build has not been tested on Python 3.x._
+>_Note: This build has not been tested on Python 3.x._
 
 
 ### **[Django](https://docs.djangoproject.com/en/1.11/)**
+
 Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Type the following on the command line to see if you have Django installed:
 
 ```bash
 $ python -m django --version
 ```
+
 If Django is installed, you should see the version of your installation. If it isn’t, you’ll get an error saying `No module named django`.
 
 If Django is not installed, download version 1.11 [here](https://www.djangoproject.com/download/1.11.13/tarball). This will immediately start downloading the package. Once that's complete, unzip the file and navigate to where the folder is via the command line:
@@ -56,8 +62,12 @@ If Django is not installed, download version 1.11 [here](https://www.djangoproje
 ```bash
 $ cd /path/to/Django-1.11.13
 ```
-> **Tip (Mac OS X):** You can drag a folder from Finder to your command line tool to get the path:
-> <kbd><img src="../assets/dragfolder.gif?raw=true" width="400"></kbd>
+
+_**Tip (Mac OS X):** You can drag a folder from Finder to your command line tool to get the path:_
+
+<p align="center">
+  <kbd><img src="../assets/dragfolder.gif?raw=true" width="400"></kbd>
+</p>
 
 Next, type the following command:
 
@@ -70,6 +80,7 @@ If you're getting a permission error, you can use `sudo`:
 ```bash
 $ sudo python setup.py install
 ```
+
 This will install Django for all users (you will be prompted for your computer user password).
 
 You can also use the following to install Django for _only_ your current user:
@@ -78,11 +89,13 @@ You can also use the following to install Django for _only_ your current user:
 $ python setup.py install --user
 ```
 
-_Note: The versions of Python and Django that you are using are important. Django **1.11** is the last version to support Python **2.7**. For more info about version support, go to [Django's FAQ page](https://docs.djangoproject.com/en/1.11/faq/install/#faq-python-version-support)._
+>_Note: The versions of Python and Django that you are using are important. Django **1.11** is the last version to support Python **2.7**. For more info about version support, go to [Django's FAQ page](https://docs.djangoproject.com/en/1.11/faq/install/#faq-python-version-support)._
+
 
 ## <a name="installation"></a>Installation
 
 Now that you have all the prerequisites installed, you're ready to clone this project and get the development environment running on your local machine.
+
 
 ### Initial Download
 
@@ -100,6 +113,7 @@ Afterwards, enter the following to clone this repository into a new directory in
 $ git clone git@github.com:michellecruz/jobs-cms.git
 ```
 
+
 ### Starting Your Development Environment
 
 Now that you have the project stored locally, navigate to the directory of the repo (where **manage.py** is in the [Project Structure](#project-structure)).
@@ -113,20 +127,23 @@ Type the following command to run your local server.
 ```bash
 $ python manage.py runserver
 ```
+
 Go to [http://localhost:8000](http://localhost:8000) and you should be able to see the website.
 
-_Note: Since this was created to teach the viewer how to create a CMS, the filters throughout this job listing website **do not work** and are only there for style purposes._
+>_Note: Since this was created to teach the viewer how to create a CMS, the filters throughout this job listing website **do not work** and are only there for style purposes._
+
 
 ## <a name="testing-locally"></a>Testing CMS Locally
 
 Now that your website it up and running locally, you can access your admin panel to make changes to the website. Go to [http://localhost:8000/admin](http://localhost:8000/admin) and use the following login credentials:
 
->username: ```admin```<br>
->password: ```password```
+username: ```admin```<br>
+password: ```password```
 
 Once logged in, you'll have access to the Admin Dashboard, where you can add/edit/delete jobs and manage your authorized admins.
 
-_Note: Because this is a demo, there are no confirmation states for **Deleting** or **Publishing**. But when you create your own CMS, it's recommended that you add these details to prevent accidental deletion of data._
+>_Note: Because this is a demo, there are no confirmation states for **Deleting** or **Publishing**. But when you create your own CMS, it's recommended that you add these details to prevent accidental deletion of data._
+
 
 ## <a name="deployment"></a>Deployment
 
@@ -134,18 +151,22 @@ _Note: Because this is a demo, there are no confirmation states for **Deleting**
 
 **[WIP: additional notes about how to deploy this on a live system]**
 
+
 ## Built With
 
 * [Django](https://www.djangoproject.com) - The web framework used.
+
 
 ## Authors
 
 * **Michelle Cruz** <[michelle@thisalso.com](mailto:michelle@thisalso.com)>
 
+
 ## Acknowledgments
 
 * Thanks to **Tyler Moody** for help with creating the initial designs.
 * Thanks to [siegelgale.com](http://www.siegelgale.com/brand-naming-8-great-fake-company-names) for the list of fictional company names.
+
 
 # <a name="project-structure"></a>Project Structure
 ```
@@ -179,6 +200,7 @@ _Note: Because this is a demo, there are no confirmation states for **Deleting**
                      ├── logged_out.html
                      └── login.html
 ```
+
 
 # <a name="faqs"></a>Frequently Asked Questions
 
