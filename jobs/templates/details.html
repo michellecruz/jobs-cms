@@ -32,9 +32,9 @@
                             <h1>{{ job.title }}</h1>
                             <h2>{{ job.company.name }} — {{ job.city }}, {{ job.state }}</h2>
                         </div>
-                        {% if job.company.website %}
+                        {% if job.link %}
                         <div class="job-link">
-                            <a href="{{ job.company.website }}" class="job-button">View on companies site</a>
+                            <a href="{{ job.link }}" class="job-button">View on companies site</a>
                         </div>
                         {% endif %}
                     </li>

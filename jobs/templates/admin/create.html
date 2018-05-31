@@ -54,7 +54,7 @@
                                 Company Logo URL
                             </label>
                             
-                            <input name="company_logo_url" id="company_logo_url" type="url" value="{% if edit_mode %}{{ job.company.logo_url }}{% endif %}" placeholder="http://..." autocomplete="company_logo_url" spellcheck="true" autofocus/>
+                            <input name="company_logo_url" id="company_logo_url" type="text" value="{% if edit_mode %}{{ job.company.logo_url }}{% endif %}" placeholder="http://..." autocomplete="company_logo_url" spellcheck="true" autofocus/>
                         </div>
                         {% endif %}
 
